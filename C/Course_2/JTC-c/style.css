@@ -1,0 +1,80 @@
+@page{
+    size: letter landscape;
+}
+
+@font-face {
+    font-family: "Apple_Chancery";
+    src: url(./fonts/Apple_Chancery_100.ttf);
+}
+
+.mainContainer{
+    height: 650px;
+    width: 900px;
+    background-color: black;
+    position: relative;
+}
+.backGroundImg{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.treadSilImg{
+    position: absolute;
+    height: auto;
+    width: 100px;
+    bottom: 122px;
+    right: 130px;
+    z-index: 10;
+}
+
+.authorisedByImg{
+    position: absolute;
+    height: auto;
+    width: 120px;
+    bottom: 126px;
+    right: 190px;
+    z-index: 10;
+}
+
+.trainingByImg{
+    position: absolute;
+    height: auto;
+    width: 120px;
+    bottom: 126px;
+    left: 190px;
+    z-index: 10;
+}
+
+.qrCode{
+    position: absolute;
+    height: 150px;
+    width: 120px;
+    top: 135px;
+    left: 70px;
+    z-index: 10;
+}
+.dateArea{
+    font-family: "Apple_Chancery";
+    position: absolute;
+    /* height: 150px; */
+    width: 250px;
+    top: 220px;
+    right: 50px;
+    z-index: 10;
+}
+.certificateText{
+    font-family: "Apple_Chancery";
+    position: absolute;
+    /* height: 150px; */
+    width: 100%;
+    top: 265px;
+    z-index: 10;
+}
+.certificateText h4{
+    width: 70%;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 25px;
+    line-height: 2.3rem;
+    font-weight: 600;
+}
