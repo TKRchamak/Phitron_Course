@@ -57,25 +57,6 @@ public:
     friend class MyCase;
 };
 
-BankAccount* createAnAccount()
-{
-    string account_holder, address, password;
-    int age;
-    cin>>account_holder>>address>>age>>password;
-    BankAccount *user = new BankAccount(account_holder, address, age, password);
-    return user;
-}
-
-void add_amount(BankAccount *newAccount)
-{
-    int amount;
-    string pass;
-    cout<<"Your current Balance is : "<<newAccount->showBalance("tkr")<<endl;
-    cout<<"Give your pass and amount"<<endl;
-    cin>>pass>>amount;
-    newAccount->add_money(pass, amount);
-}
-
 class MyCase
 {
 private:
@@ -103,6 +84,25 @@ public:
     }
 
 };
+
+BankAccount* createAnAccount()
+{
+    string account_holder, address, password;
+    int age;
+    cin>>account_holder>>address>>age>>password;
+    BankAccount *user = new BankAccount(account_holder, address, age, password);
+    return user;
+}
+
+void add_amount(BankAccount *newAccount)
+{
+    int amount;
+    string pass;
+    cout<<"Your current Balance is : "<<newAccount->showBalance("tkr")<<endl;
+    cout<<"Give your pass and amount"<<endl;
+    cin>>pass>>amount;
+    newAccount->add_money(pass, amount);
+}
 
 void addAmountInMycase(BankAccount *newAccount, MyCase *myCase)
 {
