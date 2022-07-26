@@ -44,20 +44,20 @@ UserBankAccount* create_bank_account(int id)
 
 int main()
 {
-    int userNumber;
-    cout<<"Please input the number of user you want to create = ";
-    cin>>userNumber;
-
-    UserBankAccount *userPtr[userNumber];
-    for(int i=0;i<userNumber;i++)
-    {
-        userPtr[i]= create_bank_account(i+1);
-    }
-
-    for(int i=0;i<userNumber;i++)
-    {
-        cout<<userPtr[i]->woner_name<<endl;
-    }
+//    int userNumber;
+//    cout<<"Please input the number of user you want to create = ";
+//    cin>>userNumber;
+//
+//    UserBankAccount *userPtr[userNumber];
+//    for(int i=0;i<userNumber;i++)
+//    {
+//        userPtr[i]= create_bank_account(i+1);
+//    }
+//
+//    for(int i=0;i<userNumber;i++)
+//    {
+//        cout<<userPtr[i]->woner_name<<endl;
+//    }
 
 
     return 0;
