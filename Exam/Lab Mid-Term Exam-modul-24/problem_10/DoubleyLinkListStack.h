@@ -2,8 +2,8 @@
 using namespace std;
 
 //Node <int> myNode
-//class Node
 template <typename N> class Node
+//class Node
 {
 public:
     N value;
@@ -96,6 +96,17 @@ public:
     {
         if(head==NULL) return true;
         else return false;
+    }
+
+    S mid()
+    {
+        Node <S> *temp = head;
+        for(int i=0; i<((len-1)/2); i++)
+        {
+            temp=temp->next;
+        }
+
+        return temp->value;
     }
 };
 

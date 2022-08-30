@@ -2,8 +2,8 @@
 using namespace std;
 
 //Node <int> myNode
-//class Node
 template <typename N> class Node
+//class Node
 {
 public:
     N value;
