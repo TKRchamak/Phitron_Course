@@ -20,24 +20,42 @@ void print_vector(vector<int> v)
     }
     cout<<endl;
 
+
     for(int i=0; i<v.size(); i++)
     {
         cout<<v.at(i)<<" ";
     }
     cout<<endl;
 
+//    vector<int>:: iterator it;
+//    for(it=v.begin(); it!=v.end(); it++)
+//    {
+//        cout<<*it<<" ";
+//    }
+//    cout<<endl;
+
+//auto register
 //    for(auto it=v.begin(); it!=v.end(); it++)
 //    {
 //        cout<<*it<<" ";
 //    }
+//    cout<<endl;
 
 
+//    for(auto element: v)
+//    {
+//        cout<<element<<" ";
+//    }
+//    cout<<endl;
 }
 
 
 int main()
 {
-    vector<int> v;
+//    vector<int> v;
+    vector<int> v(3, 0); // 3--->how many element 0--->set all elements value 0
+
+
 //    vector<int>:: iterator it; // this is define process of iterator
 //    vector<int>:: reverse_iterator it2; // this is define process of reverse_iterator
     // :: this scop
