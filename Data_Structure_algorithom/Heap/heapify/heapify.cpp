@@ -8,17 +8,28 @@ void cusSwap(int* a, int* b)
     *b=temp;
 }
 
+void printArr(int arr[], int sizeOf)
+{
+    for(int i=0;i<sizeOf;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+}
+
 void heapify(int arr[], int n, int curr)
 {
     int largest = curr;
     int leftChild = (2*curr)+1;
     int rightChild = (2*curr)+2;
 
-    if(leftChild<n && arr[leftChild]>arr[largest])
+    printArr(arr, n);
+
+    if(leftChild<n && arr[leftChild]<arr[largest])
     {
         largest=leftChild;
     }
-    if(rightChild<n && arr[rightChild]>arr[largest])
+    if(rightChild<n && arr[rightChild]<arr[largest])
     {
         largest=rightChild;
     }
@@ -30,15 +41,7 @@ void heapify(int arr[], int n, int curr)
     }
 }
 
-void printArr(int arr[], int sizeOf)
-{
-    for(int i=0;i<sizeOf;i++)
-    {
-        cout<<arr[i]<<" ";
-    }
 
-    cout<<endl;
-}
 
 void sortHeap(int arr[], int n)
 {
@@ -60,7 +63,7 @@ int main()
         cin>>arr[i];
     }
 
-    printArr(arr, n);
+//    printArr(arr, n);
 
 //    heapify
     int nonLeafStart = (n/2)-1;
@@ -69,7 +72,7 @@ int main()
         heapify(arr, n, i);
     }
 
-    printArr(arr, n);
+//    printArr(arr, n);
 
     sortHeap(arr, n);
     printArr(arr, n);

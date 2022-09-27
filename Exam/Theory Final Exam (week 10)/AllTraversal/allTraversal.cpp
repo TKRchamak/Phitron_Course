@@ -17,11 +17,38 @@ public:
 
 };
 
-void zigzagTraversal(Node * root)
+void inOrderTraversalFunc(Node *currRoot)
+{
+    if(currRoot==NULL)return;
+
+    inOrderTraversalFunc(currRoot->leftChild);
+    cout<<currRoot->value<<" ";
+    inOrderTraversalFunc(currRoot->rightChild);
+}
+
+void preOrderTraversalFunc(Node *currRoot)
+{
+    if(currRoot==NULL)return;
+
+    cout<<currRoot->value<<" ";
+    preOrderTraversalFunc(currRoot->leftChild);
+    preOrderTraversalFunc(currRoot->rightChild);
+}
+
+void postOrderTraversalFunc(Node *currRoot)
+{
+    if(currRoot==NULL)return;
+
+    postOrderTraversalFunc(currRoot->leftChild);
+    postOrderTraversalFunc(currRoot->rightChild);
+    cout<<currRoot->value<<" ";
+}
+
+void levelOrderTraversal(Node * root)
 {
     if(root==NULL) return;
+    int level = 0;
 
-    int level=1;
     queue<Node *> q;
     q.push(root);
     q.push(NULL);
@@ -30,33 +57,7 @@ void zigzagTraversal(Node * root)
     {
         Node *currNode = q.front();
         q.pop();
-        if(currNode!=NULL)
-        {
-            cout<<currNode->value<<" ";
-            if(level%2!=0)
-            {
-                if(currNode->rightChild!=NULL)
-                {
-                    q.push(currNode->rightChild);
-                }
-                if(currNode->leftChild!=NULL)
-                {
-                    q.push(currNode->leftChild);
-                }
-            }
-            else
-            {
-                if(currNode->leftChild!=NULL)
-                {
-                    q.push(currNode->leftChild);
-                }
-                if(currNode->rightChild!=NULL)
-                {
-                    q.push(currNode->rightChild);
-                }
-            }
-        }
-        else
+        if(currNode==NULL)
         {
             if(!q.empty())
             {
@@ -64,9 +65,23 @@ void zigzagTraversal(Node * root)
                 level++;
             }
         }
-    }
-}
+        else
+        {
+            cout<<currNode->value<<" ";
 
+            if(currNode->leftChild!=NULL)
+            {
+                q.push(currNode->leftChild);
+            }
+            if(currNode->rightChild!=NULL)
+            {
+                q.push(currNode->rightChild);
+            }
+        }
+    }
+
+    cout<<level<<endl;
+}
 
 int main()
 {
@@ -101,8 +116,7 @@ int main()
     }
 
 
-    zigzagTraversal(root);
-
+    levelOrderTraversal(root);
 
     return 0;
 }

@@ -85,6 +85,7 @@ void printTreeNodes(treeNode *currRoot, int level)
 
 }
 
+
 int levelOrderTraversel(treeNode *value, string &str, int Kth)
 {
     if(value==NULL)
@@ -146,7 +147,6 @@ treeNode* buildTreeFromPreOrderInOrder(int *preOrder, int *inOrder, int startPoi
 {
     static int id=0;
     int currentVal = preOrder[id];
-    cout<<currentVal<<endl;
     id++;
     treeNode *newNode = new treeNode(currentVal);
     if(startPoint==endPoint)
@@ -174,12 +174,11 @@ int main()
         cin>>inOrder[i];
     }
 
-//    string preOrderTraverselStr;
+    string preOrderTraverselStr;
     treeNode *root = buildTreeFromPreOrderInOrder(preOrder, inOrder, 0, n-1);
-//    printTreeNodes(root, 0);
-
-//    preOrderTraversalFunc(root, preOrderTraverselStr);
-//    cout<<endl<<preOrderTraverselStr<<endl;
+    printTreeNodes(root, 0);
+    preOrderTraversalFunc(root, preOrderTraverselStr);
+    cout<<endl<<preOrderTraverselStr<<endl;
 
     return 0;
 }
