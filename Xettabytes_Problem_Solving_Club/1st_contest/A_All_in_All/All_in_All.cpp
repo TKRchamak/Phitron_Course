@@ -1,42 +1,31 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
+
 
 int main()
 {
     freopen("text.txt", "r", stdin);
-    string a;
-    string b;
-    int flag=0;
-
+    string a,b;
+    int i,j,flag;
     while(cin>>a>>b)
     {
-        int j=0;
-        string str = "";
-        for(int i=0; i<a.length(); i++)
+        flag=0;
+        j=0;
+        for(i=0; i<a.size(); i++)
         {
-            for(j; j<b.length(); j++)
+            for(; j<b.size(); j++)
             {
-                if(b[j]==a[i])
+                if(a[i]==b[j])
                 {
-                    str+=b[j];
+                    if(i==a.size()-1)
+                        flag=1;
                     break;
                 }
             }
+            j++;
         }
-        if(flag==1)
-        {
-            cout<<"\n";
-        }
-        if(str == a)
-        {
-            cout<<"Yes";
-        }
-        else
-        {
-            cout<<"No";
-        }
-        flag=1;
+        if(flag==1) cout<<("Yes\n");
+        else cout<<("No\n");
     }
-
     return 0;
 }
