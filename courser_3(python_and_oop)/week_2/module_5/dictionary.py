@@ -14,3 +14,11 @@ print(details.items())
 
 details.clear()
 print(details)
+
+
+# student = {
+#     1: {'name': 'Emma', 'age': '27', 'sex': 'Female'},
+#     2: {'name': 'Mike', 'age': '22', 'sex': 'Male'}
+# }
+
+# print(student[1]["age"])

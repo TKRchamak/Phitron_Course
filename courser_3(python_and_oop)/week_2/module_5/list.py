@@ -1,18 +1,20 @@
 numbers = [45, 12, 78, 95, 4, 68, 24, 35, 97]
 
 # print(numbers[0])
-# print(numbers[-1])
+# print(numbers[-1]) # last index
 
-# print(numbers[2: 5])
-# print(numbers[2:])
+# slice
+# print(numbers[2: 5]) # start from index 2 and go to index 4
+# print(numbers[2:]) # start from index 3 and go to end
 
-# print(numbers[2:7:2])
+# print(numbers[2:7:2]) # start from index 2 and go to index 6 and increment 2 every iteration
 
-# print(numbers[3: -1])
-# print(numbers[-1: 3: -1])
+# print(numbers[3: -1]) # start from index 3 and go to index -1
+# print(numbers[-1: 3: -1]) # numbers[ start: end : step]
 
 # print(numbers[:])
 # print(numbers[::-1])
+# print(numbers[::-2])
 
 numbers.append(10)
 print(numbers[:])
