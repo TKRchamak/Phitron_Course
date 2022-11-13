@@ -1,3 +1,6 @@
+''' '''
+
+
 class Star_Cinema:
     def __init__(self) -> None:
         self.__hall_list = []
