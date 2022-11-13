@@ -6,6 +6,7 @@
 numbers_list = [11, 22, 33, 44, 55, 66, 77, 88, 99, 11, 55, 44]
 number_tuples = 11, 22, 33, 44, 55, 66, 77, 88, 99, 11, 55, 44
 # print(numbers_list)
+print(number_tuples)
 
 numbers_tuple = tuple(numbers_list)
 # print(numbers_tuple)
@@ -17,4 +18,4 @@ new_numbers_tuple[0][0] = 100
 
 
 aTuple = ("Orange", [10, 20, 30], (5, 15, 25))
-print(aTuple[1:2])
+# print(aTuple[1:2])
