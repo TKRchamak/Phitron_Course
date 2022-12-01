@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from time import sleep
 
 
 class Vehicle(ABC):
@@ -17,9 +18,15 @@ class Vehicle(ABC):
         self.status = 'available'
 
     @abstractmethod
-    def start_driving(self):
+    def start_driving(self, start, destination):
         self.status = 'unavailable'
         print(f'{self.vehicle_type} {self.license_plate} started')
+        distance = abs(start - destination)
+        for i in range(0, distance):
+            sleep(0.1)
+            print(
+                f'Driving: {self.license_plate} current position {i} of {distance}')
+        self.trip_finished()
 
     @abstractmethod
     def trip_finished(self):
@@ -30,8 +37,8 @@ class Car(Vehicle):
     def __init__(self, vehicle_type, license_plate, rate, driver) -> None:
         super().__init__(vehicle_type, license_plate, rate, driver)
 
-    def start_driving(self):
-        return super().start_driving()
+    def start_driving(self, start, destination):
+        return super().start_driving(start, destination)
 
     def trip_finished(self):
         self.status = 'available'
@@ -42,8 +49,8 @@ class Bike(Vehicle):
     def __init__(self, vehicle_type, license_plate, rate, driver) -> None:
         super().__init__(vehicle_type, license_plate, rate, driver)
 
-    def start_driving(self):
-        return super().start_driving()
+    def start_driving(self, start, destination):
+        return super().start_driving(start, destination)
 
     def trip_finished(self):
         self.status = 'available'
@@ -54,8 +61,8 @@ class Cng(Vehicle):
     def __init__(self, vehicle_type, license_plate, rate, driver) -> None:
         super().__init__(vehicle_type, license_plate, rate, driver)
 
-    def start_driving(self):
-        return super().start_driving()
+    def start_driving(self, start, destination):
+        return super().start_driving(start, destination)
 
     def trip_finished(self):
         self.status = 'available'

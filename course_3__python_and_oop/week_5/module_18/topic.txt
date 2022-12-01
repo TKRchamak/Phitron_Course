@@ -1,0 +1,5 @@
+1. attribute validation using asserts এট্রিবিউট ভেলিডেশন
+2. dynamic attributes ডাইনামিক এট্রিবিউট
+3. create classes from json in file জেসন থেকে ফাইলে কিভাবে অবজেক্ট ক্রিয়েট করতে হয়।
+4. Multiple inheritance (MRO) method resolution order মাল্টিপল ইনহেরিটেন্স
+5. Duck typing ডাক টাইপিং
