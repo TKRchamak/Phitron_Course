@@ -1,0 +1,20 @@
+// graph
+// visited array
+
+
+//  time complexity = O(v+e)
+//  space comlexity = O(v)
+
+
+
+void dfs(int node){
+    cout<< "visited node" <<endl;
+    visited[node] = 1;
+
+    for all adj_node of node:
+        if visited[adj_node] == 0:
+            dfs(adj_node)
+        }
+}
+
+dfs(src);
