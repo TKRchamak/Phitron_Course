@@ -70,9 +70,8 @@ int main()
 {
     // n = number of nodes
     // m = number of edges
-    int n, m;
+    int n, m, res =0;
     cin >> n >> m;
-    vector<int>adj_list[n+1];
 
     for(int i = 0 ; i < m ; i++)   // loop over the number of edges
     {
@@ -81,28 +80,32 @@ int main()
         adj_list[u].push_back(v);
     }
 
-    int src_node = 1;
-    dfs(src_node);
-
-//    int cont = 0;
-//
-//    for(vector<int> inner_adj_list: adj_list){
-//        if(cont != 0){
-//            cout<<cont<<"-->";
-//
-//            for (auto it = inner_adj_list.begin(); it != inner_adj_list.end(); ) {
-//                int res = getIndex(adj_list[*it], cont);
-//                if (res == -1) {
-//                    it = inner_adj_list.erase(it);
-//                } else {
-//                    cout<<*it;
-//                    ++it;
-//                }
-//            }
-//            cout<<endl;
+//    for(int i=0; i<n; i++){
+//        cout<<i<<"------>";
+//        for (auto it:adj_list[i]) {
+//            cout<<it<<" ";
 //        }
-//        cont++;
+//        cout<<endl;
 //    }
 
+    for(int i=0; i<n; i++){
+        for (auto it:adj_list[i]) {
+            if(getIndex(adj_list[it], i) == -1)
+            {
+                adj_list[i].erase(remove(adj_list[i].begin(), adj_list[i].end(), it), adj_list[i].end());
+                res++;
+            }
+        }
+    }
+
+//    for(int i=0; i<n; i++){
+//        cout<<i<<"------>";
+//        for (auto it:adj_list[i]) {
+//            cout<<it<<" ";
+//        }
+//        cout<<endl;
+//    }
+
+    cout<<res;
     return 0;
 }

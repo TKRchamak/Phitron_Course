@@ -5,7 +5,7 @@ using namespace std;
     Iterators - begin(), end(), rbegin(), rend()
     Capacity - size(), max_size(), capacity(), empty(), [resize(), shrink_to_fit()]
     Element access - [], at(), front(), back()
-    Modifiers - assign(), push_back(), pop_back(), insert(), erase(), clear(), swap()
+    Modifiers - assign(), push_back(), pop_back(), insert(), erase(), clear(), swap(), remove()
     sort - sort(v.begin(), v.end())
     sort - sort(v.begin(), v.end(), greater<int>())
     reverse - sort(v.begin(), v.end())
@@ -39,8 +39,9 @@ void print_vector(vector<int> v)
     cout<<endl;
 */
 
-//    auto register
+
 /*
+//    auto register
     for(auto it=v.begin(); it!=v.end(); it++)
     {
         cout<<*it<<" ";
@@ -57,6 +58,9 @@ void print_vector(vector<int> v)
     cout<<endl;
 */
 }
+
+
+
 
 
 int main()
@@ -95,6 +99,9 @@ int main()
 
 
 //    empty() use to see the vector is empty or not and return true or false;
+
+//    remove an element by value
+    v[i].erase(remove(v.begin(), v.end(), 2), v.end());
 
     return 0;
 }
