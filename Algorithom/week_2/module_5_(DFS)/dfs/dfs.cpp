@@ -35,8 +35,6 @@ vector<int>adj_list[N];
 
 
 void dfs(int node){
-    memset(visited, false, sizeof(visited));
-
     cout<< node<<endl;
     visited[node] = true;
 
@@ -58,6 +56,8 @@ void dfs(int node){
 }
 
 int main(){
+    memset(visited, false, sizeof(visited)); // set all value false;
+
     int nodes, edges;
     cin>>nodes>>edges;
 

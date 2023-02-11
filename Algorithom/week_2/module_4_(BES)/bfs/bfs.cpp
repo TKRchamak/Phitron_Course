@@ -2,10 +2,11 @@
 #define pub push_back
 using namespace std;
 
-bool completed[1000];
-int level[1000];
-vector<int> v[1000]; // vector er 5 size er array || int arr[5] ----> int er 5 size er array
+const int N = 1e5;
 
+bool completed[N];
+int level[N];
+vector<int> v[N]; // vector er 5 size er array || int arr[5] ----> int er 5 size er array
 
 void bfs(int source)
 {
