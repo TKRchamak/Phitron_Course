@@ -35,6 +35,12 @@ input ---->
 1 4
 3 4
 
+4 4
+3 2
+2 1
+1 4
+4 3
+
 */
 
 #include<bits/stdc++.h>
@@ -45,18 +51,20 @@ vector<int> graph[N];
 int visited[N];
 
 
-
-bool detect_cycle(int node){
+bool detect_cycle(int node, int parent){
     visited[node] = 1;
-//    cout<<node<<endl;
+
     for(auto element: graph[node]){
+        if(element == parent) continue;
+
         if(visited[element]==0){
-            bool have_loop = detect_cycle(element);
+            bool have_loop = detect_cycle(element, node);
             if(have_loop) return true;
-        }else if(visited[element] == 1 && element != node){
+        }else if(visited[element] == 1){
             return true;
         }
     }
+
     visited[node]=2;
     return false;
 }
@@ -68,8 +76,6 @@ int main(){
 
     memset(visited, 0, sizeof(visited));
 
-//    bool find_loop = false;
-
     for(int i=0; i<edges; i++){
         int n,m;
         cin>>n>>m;
@@ -77,8 +83,7 @@ int main(){
         graph[m].push_back(n);
     }
 
-//    detect_cycle(1);
-    if(detect_cycle(1)){
+    if(detect_cycle(1, -1)){
         cout<<"detect loop in graph"<<endl;
     }else{
         cout<<"No loop in graph"<<endl;
@@ -88,10 +93,6 @@ int main(){
 //            find_loop = dfs(i);
 //        }else break;
 //    }
-
-//     if(find_loop){
-//        cout<<"Find loop in this graph"<<endl;
-//    }else cout<<"This graph have not any loop"<<endl;
 
     return 0;
 }
