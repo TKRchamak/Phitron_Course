@@ -1,5 +1,28 @@
 /*
-Graph Must be DAG(directed acyclic  graph)
+- create an array "indegree" to maintain the number of indegrees to a node.
+	i.e. for every edge a -> b perform indegree[b]++
+
+- create an empty stack to store the topsort order
+
+- create a queue and push all the nodes in the queue with indegree[node] == 0
+
+- while the queue is not empty:
+	- pop "head" from queue
+
+	- stack.push(head)
+
+	- for adj_node in adj_list[head]:
+		- decrement indegree[adj_node] by 1
+
+		- if indegree[adj_node] == 0:
+			- queue.push(adj_node)
+
+- pop every node in the stack and print in the output
+
+
+
+
+
 problem -----> https://cses.fi/problemset/task/1679
 Assumption ----> Graph is Acyclic
 
@@ -22,20 +45,20 @@ using namespace std;
 
 const int N = 2e5;
 int visited[N];
-vector<int>graph[N];
+vector<int>adj_list[N];
 stack<int>node_stack;
 
+//void dfs(int node){
+//    visited[node] = 1;
+//
+//    for(int adj_node: adj_list[node]){
+//        if(visited[adj_node] == -1){
+//            dfs(adj_node);
+//        }
+//    }
+//    node_stack.push(node);
+//}
 
-void dfs(int node){
-    visited[node] = 1;
-
-    for(int adj_node: graph[node]){
-        if(visited[adj_node] == -1){
-            dfs(adj_node);
-        }
-    }
-    node_stack.push(node);
-}
 
 void bfs(int node){
     queue<int> q;
@@ -44,15 +67,14 @@ void bfs(int node){
     while(!q.empty()){
         int curr = q.front();
         q.pop();
-        if(visited[curr] == 1){
-            cout<<"This graph have loop"<<endl;
-            break;
+        if(visited[curr]==1){
+            continue;
         }
-        visited[curr] = 1;
-        node_stack.push(curr);
+        cout<<curr<<" ";
+        visited[curr]=1;
 
-        for(auto element: graph[curr]){
-            if(visited[element] == 0){
+        for(auto element: adj_list[curr]){
+            if(visited[element] == -1){
                 q.push(element);
             }
         }
@@ -68,12 +90,12 @@ int main(){
     for(int i=0; i<edges; i++){
         int u,v;
         cin>>u>>v; // u->v
-        graph[u].push_back(v);
+        adj_list[u].push_back(v);
     }
 
     for(int i=1; i<nodes; i++){
         if(visited[i]== -1){
-            dfs(i);
+            bfs(i);
         }
     }
 
