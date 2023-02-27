@@ -22,19 +22,41 @@ using namespace std;
 
 const int N = 2e5;
 int visited[N];
-vector<int>adj_list[N];
+vector<int>graph[N];
 stack<int>node_stack;
 
 
 void dfs(int node){
     visited[node] = 1;
 
-    for(int adj_node: adj_list[node]){
+    for(int adj_node: graph[node]){
         if(visited[adj_node] == -1){
             dfs(adj_node);
         }
     }
     node_stack.push(node);
+}
+
+void bfs(int node){
+    queue<int> q;
+    q.push(node);
+
+    while(!q.empty()){
+        int curr = q.front();
+        q.pop();
+        if(visited[curr] == 1){
+            cout<<"This graph have loop"<<endl;
+            break;
+        }
+        visited[curr] = 1;
+        node_stack.push(curr);
+
+        for(auto element: graph[curr]){
+            if(visited[element] == 0){
+                q.push(element);
+            }
+        }
+    }
 }
 
 int main(){
@@ -46,7 +68,7 @@ int main(){
     for(int i=0; i<edges; i++){
         int u,v;
         cin>>u>>v; // u->v
-        adj_list[u].push_back(v);
+        graph[u].push_back(v);
     }
 
     for(int i=1; i<nodes; i++){

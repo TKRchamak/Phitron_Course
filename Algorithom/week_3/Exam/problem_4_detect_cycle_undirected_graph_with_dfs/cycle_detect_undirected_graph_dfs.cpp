@@ -49,7 +49,7 @@ using namespace std;
 const int N = 1e5;
 vector<int> graph[N];
 int visited[N];
-
+int parent[N];
 
 bool detect_cycle(int node, int parent){
     visited[node] = 1;

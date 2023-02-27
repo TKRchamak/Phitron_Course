@@ -1,0 +1,36 @@
+// input ---> a weighted graph and a source node
+// output ----> distance of all nodes from the node
+
+*** if edge is greater then or equal to nodes, then the algorithm is more effective.
+
+/*
+space complexity --> 0(n)
+time complexity ---> 0(n)+ 0(E logE) + 0(E logE)
+                ---> |E| log |E|
+                ---> |E| log |v^2|
+                ---> 2|E| log |V|
+                ---> |E| log |V|
+                ---> 0(m log n) ==> n->v, m->E
+
+*/
+
+- create a distance array "d" ====>0(1)
+- initialize all value of "d" to infinity ====>0(n)
+- d[src] = 0; ====> 0(1)
+- create a visited array and mark all node as unvisited ====>0(n)
+- take an empty priority queue "pq"
+- pq.push({d[src], src});
+
+- while pq not empty: =====> 0(|E|)
+    - pq.front() --> head_value, head; =====> log(|E|)
+    - visited[node]=1;
+    - for all adj_node of node: =====> 0(|E|)
+        - if d[node] + c(node, adj_node) < d[adj_node]
+            d[adj_node] = d[node]+c(node, adj_node)
+            pq.push({d[adj_node], adj_node}) ====> log(|E|)
+
+
+
+- output array "d"
+
+

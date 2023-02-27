@@ -1,10 +1,8 @@
 /*
 problem -----> https://cses.fi/problemset/task/1678
 
-  >3>
- /   \
-2<----4----->1----->5
 
+input ---> have loop
 5 5
 
 2 3
@@ -14,6 +12,7 @@ problem -----> https://cses.fi/problemset/task/1678
 4 1
 
 
+input ---> have loop
 4 5
 
 1 3
@@ -22,6 +21,8 @@ problem -----> https://cses.fi/problemset/task/1678
 3 2
 3 4
 
+
+input ---> no loop
 4 4
 
 1 3
@@ -39,8 +40,9 @@ vector<int> graph[N];
 int visited[N];
 
 bool dfs(int node){
+//    cout<<node<<endl;
     visited[node]= 1;
-    cout<<node<<endl;
+
     for(auto element: graph[node]){
         if(visited[element] == -1){
             bool get_loop = dfs(element);
@@ -68,25 +70,30 @@ int main(){
 
     bool cycle_exist = false;
 
-    for(int i=0; i<=nodes; i++){
-        for(auto element: graph[i]){
-            if(visited[element] == -1){
-                bool get_bool = dfs(element);
-                if(get_bool){
-                    cycle_exist = true;
-                    break;
-                }
+//    for(int i=0; i<=nodes; i++){
+//        for(auto element: graph[i]){
+//            if(visited[element] == -1){
+//                bool get_bool = dfs(element);
+//                if(get_bool){
+//                    cycle_exist = true;
+//                    break;
+//                }
+//            }
+//        }
+//    }
+
+    for(int i=1; i<=nodes; i++){
+        if(visited[i] == -1){
+            bool get_bool = dfs(i);
+            if(get_bool){
+                cycle_exist = true;
+                break;
             }
         }
     }
 
-    if(cycle_exist){
-        cout<<"Found Cycle"<<endl;
-    }
-    else{
-        cout<<"Cycle Not Found"<<endl;
-    }
-
+    if(cycle_exist) cout<<"Find loop in this graph"<<endl;
+    else cout<<"This graph have not any loop"<<endl;
 
     return 0;
 }

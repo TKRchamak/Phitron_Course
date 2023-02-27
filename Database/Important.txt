@@ -1,0 +1,42 @@
+/*
+    kawshik kumar paul
+
+    Day 1:
+        -> Introduction to Database
+        -> Type of Database
+        -> Table and Keys
+        -> Database management system
+        -> Relational Database management system
+        -> Database relation
+    
+    Day 2:
+        -> 
+*/
+
+
+
+----------------------------------------
+----------------------------------------
+Data == totho
+Information != totho
+
+           organized
+Data ---------------------> Information
+
+** If data is organized that call Information
+** data is not unorganized
+
+
+
+----------------------------------------
+----------------------------------------
+Database 
+        -> Information
+        -> organized
+        -> computer base
+        -> electric
+
+
+Database type: 
+        -> non-relational Database (single table or multiple table but they have no relation)
+        -> relational Database
