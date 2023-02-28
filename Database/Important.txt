@@ -40,3 +40,51 @@ Database
 Database type: 
         -> non-relational Database (single table or multiple table but they have no relation)
         -> relational Database
+
+
+Database Property:
+        -> Field (column)
+        -> record (row)
+        -> values(data) (cell)
+
+
+Key in Database:
+        -> 3 type of Keys
+        -> primary key:
+                single unique value in a table
+
+        -> composite key:
+                use multiple filed for find data (subject_code , university)
+        
+        -> foreign key:
+                if one table's primary key use in another table as a value than that call foreign key,
+                (one table have roll primary key, but in library table that use the roll as a data)
+
+
+
+Database management system: (DBMS) || Relational Database management system: (RDBMS)
+        -> data/Information
+        -> hardware
+        -> software
+        -> user
+        -> processing unit
+
+        ->purpose of DBMS:
+                -> create level
+                -> rename level
+                -> delete
+                -> update
+                -> query
+            
+        -> advantage of DBMS:
+                -> organizely data storing
+                -> fast search
+                -> parallel accessing
+
+
+
+Database Relation:
+        -> 3 Type of relation:
+                -> one to one
+                -> one to many || many to one
+                -> many to many
