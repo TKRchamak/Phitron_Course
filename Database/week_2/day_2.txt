@@ -1,0 +1,46 @@
+================| kawshik kumar paul |=======================
+Day 2:
+    -> SELECT 
+    -> DISTINCT
+    -> ORDER BY (ASC/ DESC)
+    -> LIMIT
+    -> Arithmetic Operator (+, -, *, /, %)
+    -> Comparison Operator (=, !=, >, <, >=, <=, BETWEEN)
+    -> Logical Operator (AND, OR, IN, NOT IN, LIKE)
+    -> AS
+=============================================================
+
+
+==> DISTINCT:
+    for select UNIQUE data from a table column use DISTINCT
+        -> SELECT DISTINCT region_id 
+           FROM countries;
+
+
+==> ORDER BY:(ASC/ DESC)
+    ascending(small-big) and descending(big-small) order:
+        -> SELECT
+           FROM
+           WHERE
+           ORDER BY dependency_field_name ASC/DESC
+        
+        -> SELECT employee_id, salary
+           FROM employees
+           ORDER BY salary DESC
+
+
+==> LIMIT:
+        -> SELECT
+           FROM
+           WHERE
+           LIMIT 10 // first 10 data
+
+        -> SELECT
+           FROM
+           WHERE
+           LIMIT 10 OFFSET 15 //fast 10 data after avoid 15 data
+
+        -> SELECT
+           FROM
+           WHERE
+           LIMIT 10,15  //fast 10 data after avoid 15 data
