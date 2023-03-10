@@ -5,5 +5,86 @@ Day 1:
     -> constraints (rules)
     -> UPDATE table
     -> DELETE table
-    -> Select statement basics
-    -> Select statement example
+    -> SELECT statement basics
+    -> SELECT statement example
+=============================================================
+
+==> create table:
+        -> CREATE TABLE tableName(
+            Roll INT;
+            Name VARCHAR(30),
+            Age INT,
+            ContactNo CHAR(11),
+            Email VARCHAR(30),
+            Address VARCHAR(20),
+        );
+    
+    for see data use:
+        -> SELECT * FROM Student;
+    
+    for delete table:
+        -> DROP TABLE tableName;
+
+
+==> Inserting data into table:
+        -> INSERT INTO Student(Roll, Name, Age, ContactNo, Email, Address)
+           VALUES(101, "Tonmoy", 20, "01772536411", "tonmoykumarroy6@gmail.com", "dhaka")
+
+        ===| If did not give some value like address, don't put there|=====
+        -> INSERT INTO Student(Roll, Name, Age, ContactNo, Email)
+           VALUES(101, "Tonmoy", 20, "01772536411", "tonmoykumarroy6@gmail.com")
+
+
+==> constraints (rules for validation):
+    When table create then set the required field in the create table statement like:
+        -> CREATE TABLE tableName(
+            Roll INT PRIMARY KEY;
+            Name VARCHAR(30) NOT NULL,
+            Age INT CHECK >= 18,
+            ContactNo CHAR(11) NOT NULL,
+            Email VARCHAR(30) UNIQUE,
+            Address VARCHAR(20) DEFAULT "no address found",
+        );
+    
+    another approach:
+        -> CREATE TABLE tableName(
+            Roll INT;
+            Name VARCHAR(30) NOT NULL,
+            Age INT CHECK >= 18,
+            ContactNo CHAR(11) NOT NULL,
+            Email VARCHAR(30),
+            Address VARCHAR(20) DEFAULT "no address found",
+
+            CONSTRAINTS roll_const PRIMARY KEY(Roll),
+            UNIQUE(email)
+        );
+
+    if use PRIMARY KEY, not need to use UNIQUE OR NOT NULL. it take by default that.
+
+
+==> UPDATE table:
+    for update sql normally gives error for safe update, to avoid that use:
+        -> SET SQL_SAFE_UPDATES = 0; // safe mode off
+        -> UPDATE tableName;
+           SET Name = "Chamak", ContactNo = "01955406547"
+           WHERE Roll = 101;
+        -> SET SQL_SAFE_UPDATES = 1; // safe mode on
+
+
+==> DELETE a record from table;
+        -> SET SQL_SAFE_UPDATES = 0; // safe mode off
+        -> DELETE from tableName
+           WHERE Roll = 101;
+        -> SET SQL_SAFE_UPDATES = 1; // safe mode on
+
+
+==> SELECT statement:
+        -> SELECT * FROM tableName; // use for display all data from given table
+
+        -> SELECT Name, Roll, Email FROM tableName // use for display only  Name, Roll, email from this table
+
+        -> SELECT * FROM tableName 
+           WHERE Roll = 101 // use for display only for this record data
+        
+        -> SELECT Name, Roll, Email FROM tableName
+           WHERE Roll = 101 // use for display only for this record data
