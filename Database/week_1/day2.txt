@@ -1,0 +1,55 @@
+/*
+    kawshik kumar paul
+
+    Day 1:
+        -> Introduction to Database
+        -> Type of Database
+        -> Table and Keys
+        -> Database management system
+        -> Relational Database management system
+        -> Database relation
+    
+    Day 2:
+        -> Database Design Strategies
+            * Top Down Approach (ki ki data lagbe ta age thekei collect kore rakhte parbo)
+            * Bottom Up Approach (data ace oi data k use kore root a jabo)
+            * Requirement Analysis  (database ki ki data rakhbo)
+            * Pitfalls, avoid this 
+                - Redundancy (extra data stored or I/O from table)
+                - Lack of completeness 
+        
+        -> ER Diagram
+            * Model Introduction
+            * Relationship (Cardinality, Connectivity)
+            * Participation
+            * Notations
+            * Strong and Weak Entity
+            * Primary Key
+            * Design Practices
+            * Specialized, Generalization
+            * Aggregation
+*/
+
+
+
+ER - Entity Relationship
+
+ERD use for Database Modeling
+
+* Entity - student , teacher, result
+* Attribute - Entity's data
+* Relationship - Entity's Relationship
+
+Relationship:
+        -> Connectivity (table connection)
+        -> Cardinality (1:1, 1:N, M:N == one to one, one to many, many to many)
+        
+
+============================================
+Participation (ongsogrohon):
+        -> Total Participation (akta Entity set er sobai jodi participate kore tahole seta total)
+        -> Partial Participation (sobai jodi participate na kore)
+
+
+
+==============| ERD notation: follow hand note ******* |===============================

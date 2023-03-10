@@ -1,0 +1,23 @@
+===========| Kawshik Kumar Paul |==============
+
+Day 3:
+    -> Query Language, SQL
+    -> MySQL download and install
+    -> Data types
+    -> CREATE Table
+    -> RENAME Table
+    -> DROP Table
+===============================================
+
+Query Type:
+        -> Select Query (find data by primary key)  **
+        -> Parament Query (find data by value)
+        -> Crosstab Query (find data set by value)
+        -> Unmatched Query (find Unmatched data)
+        -> Action Query (use for change in Database)  **
+
+Query Language:
+        -> QUEL (Query Language)
+        -> QBL (Query by Example)
+        -> SQL (Structured Query Language)  **
+ 
