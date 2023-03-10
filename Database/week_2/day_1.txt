@@ -1,0 +1,9 @@
+================| kawshik kumar paul |=======================
+Day 1:
+    -> create table
+    -> Inserting data into table
+    -> constraints (rules)
+    -> UPDATE table
+    -> DELETE table
+    -> Select statement basics
+    -> Select statement example
