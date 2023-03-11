@@ -15,14 +15,22 @@ Day 3:
         -> DEGREES
         -> DIV | ex: 10 DIV 2 = 5
         -> EXP | ex: EXP(-5) = e^-5
-        -> 
+        -> GREATEST | ex: GREATEST(1,2,3,4,5,10,100,120, 122) its give 120
+        -> LEAST | ex: LEAST(1,2,3,4,5,10,100,120, 122) its give 1
+        -> LN | ex: log_e (x) === e^x === y
+        -> LOG === LN | ex: log (x) === e^x === y
+        -> log10 | ex: log_10 (x) === 10^x === y
+        -> log2 | ex: log_2 (x) === 2^x === y
+        -> MOD | ex: 10 MOD 3 = 1
+        -> PI | ex: PI() === 3.1416.....
+        -> POW | ex: POW(2,3) == 2^3
+        -> RADIANS | ex: RADIANS(degree_value)
+        -> RAND | ex: random number
+        -> ROUND | ex: ROUND(135.375, 2) === 135.38
+        -> TRUNCATE | ex: TRUNCATE(135.375, 2) === 135.37
+        -> SQRT | ex: SQRT(9) = 3
+
         -> CONCAT 
-        -> POW
-        -> GREATEST
-        -> LEAST
-        -> LOG
-        -> EXP,
-        -> RAND
     -> Group Function (COUNT, MIN, MAX, SUM AVG)
     -> GROUP BY
     -> HAVING
