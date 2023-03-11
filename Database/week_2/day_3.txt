@@ -28,3 +28,6 @@ Day 3:
     -> HAVING
     ALTER Table
 =============================================================
+
+
+this is for check its work or not
