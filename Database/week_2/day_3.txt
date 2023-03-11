@@ -4,7 +4,19 @@ Day 3:
         -> UPPER
         -> LOWER
         -> ABS-(absolute) | ex: ABS(-2) = 2
-        -> CONCAT
+        -> COS
+        -> ACOS-(cos inverse)
+        -> SIN
+        -> ASIN
+        -> TAN
+        -> ATAN
+        -> CEIL
+        -> FLOOR
+        -> DEGREES
+        -> DIV | ex: 10 DIV 2 = 5
+        -> EXP | ex: EXP(-5) = e^-5
+        -> 
+        -> CONCAT 
         -> POW
         -> GREATEST
         -> LEAST
