@@ -1,0 +1,18 @@
+================| kawshik kumar paul |=======================
+Day 3:
+    -> Function:
+        -> UPPER
+        -> LOWER
+        -> ABS-(absolute) | ex: ABS(-2) = 2
+        -> CONCAT
+        -> POW
+        -> GREATEST
+        -> LEAST
+        -> LOG
+        -> EXP,
+        -> RAND
+    -> Group Function (COUNT, MIN, MAX, SUM AVG)
+    -> GROUP BY
+    -> HAVING
+    ALTER Table
+=============================================================

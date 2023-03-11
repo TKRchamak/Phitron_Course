@@ -6,7 +6,7 @@ Day 2:
     -> LIMIT
     -> Arithmetic Operator (+, -, *, /, %)
     -> Comparison Operator (=, !=, >, <, >=, <=, BETWEEN)
-    -> Logical Operator (AND, OR, IN, NOT IN, LIKE)
+    -> Logical Operator (AND, OR, IN, NOT IN, LIKE(pattern check))
     -> AS
 =============================================================
 
@@ -44,3 +44,42 @@ Day 2:
            FROM
            WHERE
            LIMIT 10,15  //fast 10 data after avoid 15 data
+
+
+==> Arithmetic Operator:
+      -> SELECT employee_id%3
+         FROM employees
+   
+
+==>Comparison Operator:
+      -> SELECT fast_name, last_name 
+         FROM employees
+         WHERE salary BETWEEN 9000 and 9000;
+
+
+==> Logical Operator:
+   for (AND OR)
+      -> SELECT fast_name, last_name 
+         FROM employees
+         WHERE (salary>9000 AND last_name == "Astrin") OR (---- AND -----);
+
+   for (IN)
+      -> SELECT *
+         FROM employees
+         WHERE job_id IN("AC_ACCOUNT", "AD_ASST")
+
+   for (NOT IN)
+      -> SELECT *
+         FROM employees
+         WHERE job_id NOT IN("AC_ACCOUNT", "AD_ASST")
+
+   for (LIKE)
+      -> SELECT *
+         FROM employees
+         WHERE job_id LIKE "S%"
+
+
+==> AS:
+   for change field name use AS:
+      -> SELECT first_name AS name1
+         FROM employees
