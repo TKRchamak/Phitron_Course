@@ -4,11 +4,9 @@ Day 3:
     -> Group Function (COUNT, MIN, MAX, SUM AVG)
     -> GROUP BY
     -> HAVING
-    ALTER Table
+    -> ALTER TABLE ( use for added new thing in a existing table)
 =============================================================
 
-
-this is for check its work or not
 
 ==> Function:
         -> UPPER
@@ -39,5 +37,42 @@ this is for check its work or not
         -> ROUND | ex: ROUND(135.375, 2) === 135.38
         -> TRUNCATE | ex: TRUNCATE(135.375, 2) === 135.37
         -> SQRT | ex: SQRT(9) = 3
-
         -> CONCAT 
+
+
+==> Group Function:
+        -> MAX
+            ex: SELECT MAX(salary) FROM employee;
+        -> MIN
+            ex: SELECT MIN(salary) FROM employee;
+        -> COUNT
+            ex: SELECT COUNT(*) FROM employee; /
+                SELECT COUNT(employee_id) FROM employee;
+        -> SUM
+            ex: SELECT SUM(salary) FROM employee;
+        -> AVG
+            ex: SELECT AVG(salary) FROM employee;
+
+
+==> GROUP BY:
+    Advantage of this is, divided into groups
+        -> ex:
+        SELECT job_id, SUM(salary)
+        FROM employee
+        GROUP BY job_id;
+
+
+==> HAVING:
+    As like as WHERE but HAVING only work on GROUP BY.
+    And on the other hand WHERE is use overall condition.
+        ex:
+        SELECT job_id, count (*)
+        FROM employee
+        GROUP BY job_id
+        HAVING COUNT(*) --> condition
+
+
+==> ALTER TABLE:
+        -> ex:
+        ALTER TABLE table_name
+        ADD phone_no CHAR(11);
