@@ -38,7 +38,7 @@ Day 1:
 ==> constraints (rules for validation):
     When table create then set the required field in the create table statement like:
         -> CREATE TABLE tableName(
-            Roll INT PRIMARY KEY;
+            Roll INT PRIMARY KEY,
             Name VARCHAR(30) NOT NULL,
             Age INT CHECK >= 18,
             ContactNo CHAR(11) NOT NULL,
