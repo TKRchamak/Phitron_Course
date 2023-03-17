@@ -1,0 +1,39 @@
+================| kawshik kumar paul |=======================
+Day 1:
+    -> SELECT statement review
+    -> DROP, DELETE, TRUNCATE Table
+    -> Sub Query
+    -> Sub Query example
+    -> Advance Sub Query examples
+=============================================================
+
+==> Select statement:
+        -> SELECT ______
+           FROM ______
+           WHERE ______ (condition)
+           GROUP BY ______ (group korar jonno)
+           HAVING ______ (GROUP BY er upore kono condition er jonno use kora hoto)
+           ORDER BY ______ (ASC/DESC)
+
+==> DROP :
+    use for remove a full table from database
+        -> DROP TABLE table_name;
+
+==> DELETE :
+    use for remove a row / record from a table
+        -> DELETE FROM table_name
+           WHERE id=111;
+
+==> TRUNCATE :
+    use for (reset table/ remove all record from table)
+        -> TRUNCATE TABLE table_name;
+
+==> Sub Query:
+    Query have inner Query
+        -> SELECT name
+           FROM table_name
+           WHERE salary > (
+                            SELECT salary
+                            FROM table_name
+                            WHERE id = 111
+                          );

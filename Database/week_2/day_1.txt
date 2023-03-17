@@ -1,5 +1,7 @@
 ================| kawshik kumar paul |=======================
 Day 1:
+    -> create database --> CREATE DATABASE database_name;
+    -> use database --> USE database_name;
     -> create table
     -> Inserting data into table
     -> constraints (rules)
@@ -8,6 +10,7 @@ Day 1:
     -> SELECT statement basics
     -> SELECT statement example
 =============================================================
+
 
 ==> create table:
         -> CREATE TABLE tableName(
