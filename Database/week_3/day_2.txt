@@ -1,0 +1,34 @@
+================| kawshik kumar paul |=======================
+Day 2:
+    -> JOIN table
+    -> JOIN statement --> ON, USING
+    -> INNER JOIN
+    -> OUTER JOIN
+    -> LEFT JOIN
+    -> RIGHT JOIN
+=============================================================
+
+What is JOIN ?
+--> it s use for Join 2 or more table, its more efficient and faster.
+
+==> SELECT data from multiple table without JOIN table
+*** disadvantage of this is time consuming // huge loop
+
+        -> SELECT student.roll, student.name, result.grade
+           FROM student, result
+           WHERE student.roll = result.roll;
+
+JOIN syntax:
+        -> SELECT field_names
+           FROM table1 JOIN table2 USING (field_name)
+           WHERE
+           GROUP BY
+           HAVING
+           ORDER BY
+
+    JOIN USING:
+        SELECT employees.employee_id, employees.first_name, departments.department_name
+        FROM employees JOIN departments USING (department_id);
+
+    JOIN ON:
+        

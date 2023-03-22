@@ -37,3 +37,32 @@ Day 1:
                             FROM table_name
                             WHERE id = 111
                           );
+        
+        -> ex:
+        SELECT name
+        FROM table_name
+        WHERE job_id != "it_prog"
+        AND salary < ANY (
+            SELECT salary
+            FROM table_name
+            WHERE job_id = "it_prog"
+        )
+
+==> correlated dub Query:
+        -> SELECT *
+           FROM employees E1
+           WHERE 3 <= (
+                SELECT COUNT(*)
+                FROM employees E2
+                WHERE E2.salary < E1.salary
+           );
+
+    E1 table er current employee er salary max ki na?
+        -> SELECT last_name 
+           FROM employees E1
+           WHERE NOT EXISTS (
+                SELECT *
+                FROM employees E2
+                WHERE E1.department = E2.department AND
+                E2.salary > E1.salary
+           );
