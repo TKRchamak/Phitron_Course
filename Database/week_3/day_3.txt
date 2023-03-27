@@ -57,3 +57,14 @@ Day 2:
 
         INSERT INTO Enroll(student_no, course_no, jdate)
         VALUE()
+
+
+==> TRIGGER: 
+        CREATE TRIGGER tr_cap
+        BEFORE INSERT ON table_name
+        FOR EACH ROW
+        SET NEW.name = UPPER(NEW.name)
+
+==> Date & time:
+        CONVERT_TZ -- TIME ZONE
+        CURDATE
