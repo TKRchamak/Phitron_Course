@@ -8,9 +8,6 @@
         -> Database management system
         -> Relational Database management system
         -> Database relation
-    
-    Day 2:
-        -> 
 */
 
 
@@ -49,16 +46,24 @@ Database Property:
 
 
 Key in Database:
-        -> 3 type of Keys
+        *** 3 type of Keys
         -> primary key:
                 single unique value in a table
+                ex:
+                PRIMARY KEY(student_id);
 
         -> composite key:
                 use multiple filed for find data (subject_code , university)
+                ex:
+                PRIMARY KEY(student_id, exam_code);
+                
         
         -> foreign key:
                 if one table's primary key use in another table as a value than that call foreign key,
                 (one table have roll primary key, but in library table that use the roll as a data)
+                ex:
+                FOREIGN KEY (exam_code)
+                        REFERENCE exam_table(exam_code)
 
 
 

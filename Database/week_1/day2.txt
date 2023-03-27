@@ -1,14 +1,6 @@
 /*
     kawshik kumar paul
 
-    Day 1:
-        -> Introduction to Database
-        -> Type of Database
-        -> Table and Keys
-        -> Database management system
-        -> Relational Database management system
-        -> Database relation
-    
     Day 2:
         -> Database Design Strategies
             * Top Down Approach (ki ki data lagbe ta age thekei collect kore rakhte parbo)

@@ -1,0 +1,59 @@
+================| kawshik kumar paul |=======================
+Day 2:
+    -> SET operation
+    -> UNION (no duplicate value)
+    -> UNION ALL (have duplicate value)
+    -> MINUS
+    -> ON DELETE
+    -> Triggers
+    -> Date & time
+=============================================================
+
+==> SET:
+    set defined by {}, and have non repeated value. most of the case that is sorted.
+        -> a = {1,2,3,4,5}
+
+==> SET operation:
+        a = {1,2,3,4,5}
+        b = {4,5,6,7,8}
+        a U b = {1,2,3,4,5,6,7,8}
+        a n b = a intersection b; "common gulo hobe". = {4,5};
+        a-b == a\b == a - (a n b) == {1,2,3}
+
+    ==> UNION:
+        discarding duplicates
+            a u b = a + (b - a n b)
+        
+        select parameters must be same.
+
+        SELECT name, roll
+        FROM student_table
+        UNION
+        SELECT name, id
+        FROM teacher_table
+
+    ==> MINUS:
+        a MINUS b == a-b == a\b
+
+        SELECT name, roll
+        FROM student_table
+        UNION
+        SELECT name, id
+        FROM teacher_table
+
+==> ON DELETE:
+        CREATE TABLE Enroll(
+            student_no INT,
+            course_no INT,
+            jdate DATE,
+            PRIMARY KAY (student_no, course_no),
+            FOREIGN KEY (student_no)
+                REFERENCE student_table(student_no)
+                ON DELETE CASCADE
+            FOREIGN KEY (course_no)
+                REFERENCE course_table(course_no)
+                ON DELETE CASCADE
+        )
+
+        INSERT INTO Enroll(student_no, course_no, jdate)
+        VALUE()
