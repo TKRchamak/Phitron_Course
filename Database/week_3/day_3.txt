@@ -42,6 +42,7 @@ Day 2:
         FROM teacher_table
 
 ==> ON DELETE:
+    *** https://drive.google.com/file/d/1hmZ988awtDDU91QgNaL9JQI7z0wCueof/view
         CREATE TABLE Enroll(
             student_no INT,
             course_no INT,
@@ -68,3 +69,6 @@ Day 2:
 ==> Date & time:
         CONVERT_TZ -- TIME ZONE
         CURDATE
+    
+    *** https://drive.google.com/file/d/1jexPA_FD0y4VpBMWlDi6UsFfiUBWKkCV/view
+ 
