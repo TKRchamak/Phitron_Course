@@ -3,16 +3,6 @@
 
 *** if edge is greater then or equal to nodes, then the algorithm is more effective.
 
-/*
-space complexity --> 0(n)
-time complexity ---> 0(n)+ 0(E logE) + 0(E logE)
-                ---> |E| log |E|
-                ---> |E| log |v^2|
-                ---> 2|E| log |V|
-                ---> |E| log |V|
-                ---> 0(m log n) ==> n->v, m->E
-
-*/
 
 - create a distance array "d" ====>0(1)
 - initialize all value of "d" to infinity ====>0(n)
@@ -32,5 +22,18 @@ time complexity ---> 0(n)+ 0(E logE) + 0(E logE)
 
 
 - output array "d"
+
+
+
+/*
+space complexity --> 0(n)
+time complexity ---> 0(n)+ 0(E logE) + 0(E logE)
+                ---> |E| log |E|
+                ---> |E| log |v^2|
+                ---> 2|E| log |V|
+                ---> |E| log |V|
+                ---> 0(m log n) ==> n->v, m->E
+
+*/
 
 

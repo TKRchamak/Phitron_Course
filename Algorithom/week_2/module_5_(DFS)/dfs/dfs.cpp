@@ -39,12 +39,8 @@ void dfs(int node){
     visited[node] = true;
 
     for(int adj_node: adj_list[node]){
-        if(visited[adj_node]){
-            continue;
-        }else
-        {
-            dfs(adj_node);
-        }
+        if(visited[adj_node])continue;
+        else dfs(adj_node);
     }
 
 //    for(int i=0; i<adj_list[node].length(); i++){  // length || size

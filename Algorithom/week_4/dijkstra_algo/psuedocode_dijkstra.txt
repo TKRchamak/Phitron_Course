@@ -1,5 +1,12 @@
 // input ---> a weighted graph and a source node
-// output ----> distance of all nodes from the node
+// output ----> distance of all nodes from the source node
+
+
+// source theke baki node gulor distance ber korte hobe
+// 1. select source node and make visited, set distance 0, and calculate the nearest single edge nodes distance = source node value + edge value.
+// 2. find the smallest value but not visited, take this node as a source node and calculate again.
+
+
 
 - create a distance array "d"
 - initialize all value of "d" to infinity
