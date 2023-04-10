@@ -1,0 +1,40 @@
+
+    -1       5
+1 ----- 2 ------- 4
+
+edges for this graph : the graph is directed
+    2  4
+    1  2
+
+
+
+For this graph find SSSP distance need maximum(n-1) iteration if there n nodes.-----> this is the Bellman-Ford algo.
+
+If int n th iteration any node relaxed that means the graph have negative cycle. ------> negative cycle detection
+
+
+
+// Pseudo code : Bellman-Ford
+
+Input  -> A weighted, directed graph( with no negative cycle), a source node.
+Output -> Shorted distance from src node to all other nodes
+
+- create a distance value "d" with all value to infinity.
+- d[src] = 0;
+
+- negative_cycle = false
+
+- for i=1 to n-1:   -> O(n)
+    - for all edge e(u, v, w)   -> O(E * V)
+        - if d[u]+ w < d[v]:
+            - d[v] = d[u] + W
+            - if i == n:
+                negative_cycle = true
+
+- print whether negative cycle exist
+- print the distance array "d"
+
+
+time complexity ------>  O( |V| * |E| ) = O(n * n^2) = O(n^3)
+
+*** time complexity is the draw back for Bellman-Ford
