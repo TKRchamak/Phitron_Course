@@ -15,7 +15,7 @@
     - pq.front() --> head_value, head; =====> log(|E|)
     - visited[node]=1;
     - for all adj_node of node: =====> 0(|E|)
-        - if d[node] + c(node, adj_node) < d[adj_node]
+        - if d[node] + c(node, adj_node) < d[adj_node]  // if relaxed push in queue
             d[adj_node] = d[node]+c(node, adj_node)
             pq.push({d[adj_node], adj_node}) ====> log(|E|)
 

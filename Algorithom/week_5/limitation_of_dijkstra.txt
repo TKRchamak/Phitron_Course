@@ -1,0 +1,16 @@
+Dijkstra shortcomings:
+    --> it can not work with negative value properly / all-time,
+    --> can not detect negative cycle
+    --> it work with DAG(directed acyclic graph)
+
+           5          1
+    1 --------- 2 -------- 4
+     \         /
+  -10 \       / 2
+       \     /
+          3
+
+this graph have Negative Cycle & Negative Edge,
+
+For this negative cycle the after relax the final node value is almost negative infinity
+
