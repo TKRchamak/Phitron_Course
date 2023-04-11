@@ -1,6 +1,13 @@
---> Dijkstra's limitation
---> Bellman-Ford Simulation
---> Pseudo code & complexity
---> code
---> Negative Cycle Detect
---> Code
+Day-1 :
+    --> Dijkstra's limitation
+    --> Bellman-Ford Simulation
+    --> Pseudo code & complexity
+    --> code
+    --> Negative Cycle Detect
+    --> Code
+
+Day-2 :
+    --> Path Print in Bellman-Ford
+    --> Negative Cycle Printing in Bellman-Ford
+    --> Pseudo Code
+    --> 
