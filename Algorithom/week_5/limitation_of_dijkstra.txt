@@ -12,5 +12,5 @@ Dijkstra shortcomings:
 
 this graph have Negative Cycle & Negative Edge,
 
-For this negative cycle the after relax the final node value is almost negative infinity
+For this negative cycle, after relaxation the final node value is almost negative infinity
 
