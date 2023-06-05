@@ -16,6 +16,8 @@ try:
     print(next(iter_number))
     print(next(iter_number))
     print(next(iter_number))
+
+    # in this line next dose not find any iter value and give error
     print(next(iter_number))
 
 

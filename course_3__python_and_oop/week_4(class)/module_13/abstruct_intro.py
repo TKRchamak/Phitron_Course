@@ -10,6 +10,11 @@
         @property
         def func
 
+    abstract class dose not make any instance,
+    it use like a model for child class,
+
+    abs method are must be declare in inherit class
+
     setter use to change private variable
         @property.setter --> @func.setter
 '''

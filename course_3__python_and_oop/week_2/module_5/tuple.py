@@ -1,4 +1,4 @@
-# 1. tuple[0] --->access number by index
+# 1. tuple[0] ---> access number by index
 # 2. tuple[0] = 45 -----> this is not possible cause its immutable
 # 3. tuple[0][0] ---------> but inner content is mutable/ change able
 

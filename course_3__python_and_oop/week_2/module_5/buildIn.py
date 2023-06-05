@@ -3,10 +3,12 @@
 
 numbers = [45, 12, 78, 95, 4, 68, 24, 35, 97]
 
+# numbers = sorted(numbers)
 # numbers = sorted(numbers, reverse=True)
 # print(numbers)
 
-# numbers = reversed(numbers)
+numbers = reversed(numbers)
+# print(numbers)
 # print(list(numbers))
 
 
@@ -22,5 +24,5 @@ actors = [
 # actors = sorted(actors, key=lambda actor: actor['name'])
 # print(actors)
 
-actors = sorted(actors, key=lambda actor: actor['age'], reverse=True)
-print(actors)
+# actors = sorted(actors, key=lambda actor: actor['age'], reverse=True)
+# print(actors)
